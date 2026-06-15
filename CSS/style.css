@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Lexend+Deca:wght@100..900&family=Nova+Round&family=Silkscreen:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&family=Michroma&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Silkscreen:wght@400;700&family=Island+Moments&family=Loved+by+the+King&family=Uncial+Antiqua&display=swap');
 
 * {
     margin: 0;
@@ -11,20 +10,30 @@
 
 body {
     font-family: 'Grotesk', sans-serif;
-    background-color: #1b1b1b;
+    background-image: radial-gradient(#551117, #1d0605);
 }
 
 header {
     position: relative;
+    width: auto;
     height: 1080px;
+}
+
+#logo {
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    left: 4%;
+    top: 2.5%;
 }
 
 .menu {
     color: white;
     font-weight: 600;
+    position: absolute;
     display: flex;
-    justify-content: flex-end;
-    margin: 10px;
+    right: 4%;
+    top: 0.9%;
 }
 
 li {
@@ -33,7 +42,7 @@ li {
 }
 
 li:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px;
     cursor: pointer;
 }
 
@@ -62,10 +71,9 @@ li:hover {
 
 #dev {
    font-family: "Orbitron", sans-serif;
-   font-weight: 900;
    color: white;
    position: absolute;
-   top: 26%;
+   top: 25.7%;
    right: 10%;
 }
 
@@ -95,11 +103,13 @@ li:hover {
     font-size: 500%;
     font-family: 'Silkscreen', sans-serif;
     text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.699);
-    color: rgb(0, 0, 0);
     -webkit-text-stroke: 3px rgb(255, 255, 255);
     position: absolute;
     left: 57%;
     top: 34%;
+    background: -webkit-linear-gradient( #8a2020, #551117);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #character {
@@ -116,3 +126,141 @@ li:hover {
     filter: drop-shadow(5px 6px 15px rgba(0, 0, 0, 0.712));
     width: 160px;
 }
+
+main {
+    position: relative;
+    height: 1080px;
+}
+
+#on {
+    font-size: 500%;
+    font-family: 'Silkscreen', sans-serif;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.699);
+    -webkit-text-stroke: 3px rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    background: -webkit-linear-gradient( #551117, #ff9c94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hello {
+    font-size: 200px;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.37);
+    background: -webkit-linear-gradient( #dddee72f, #0e258a1e);
+    -webkit-background-clip: text;
+    font-family: 'Silkscreen', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.397);
+    position: absolute;
+    top: 80%;
+    left: 24%;
+}
+
+#letter {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 2;
+    width: 700px;
+    transform: rotate(-10deg); 
+    filter:grayscale(100%) drop-shadow( 3px 3px 15px rgba(0, 0, 0, 0.411));
+}
+
+#photo {
+    width: 370px;
+    height: 480px;
+    background-color: rgb(231, 231, 231);
+    box-shadow:-6px 6px 8px rgba(0, 0, 0, 0.753);
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    z-index: 2;
+    transform: rotate(-10deg);
+}
+
+#sophie {
+    width: 300px;
+    position: absolute;
+    left: 10%;
+    top: 6%;
+}
+
+#id {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-family: "Island Moments",cursive;
+    font-size: 60px;
+    transform: rotate(-10deg);
+}
+
+#age {
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    font-family: "Island Moments",cursive;
+    font-size: 60px;
+}
+
+#lang {
+    position: absolute;
+    bottom: -2%;
+    left: 69%;
+    font-family: "Loved by the King",cursive;
+    font-size: 36px;
+}
+
+#flag {
+    position: absolute;
+    width: 100px;
+    bottom: 10%;
+    left: 20%;
+    z-index: 3;
+    filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.377));
+    transform: rotate(-30deg);
+}
+
+#Im {
+    position: absolute;
+    width: 160px;
+    top: 48%;
+    left: 34%;
+    z-index: 3;
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.377));
+    transform: rotate(9deg);
+}
+
+#game {
+    font-size: 36px;
+    font-weight: 600;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background: -webkit-linear-gradient( #5d6dff, #ffffff);
+    -webkit-background-clip: text;
+    font-family: 'Silkscreen', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    position: absolute;
+    top: 58%;
+    left: 37%;
+    z-index: 4;
+    transform: rotate(-10deg);
+}
+
+#profile {
+    font-size: 36px;
+    font-weight: 600;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background: -webkit-linear-gradient( #5d6dff31, #16139c8e);
+    -webkit-background-clip: text;
+    font-family: 'Silkscreen', sans-serif;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+    position: absolute;
+    top: 59%;
+    left: 40%;
+    z-index: 4;
+    transform: rotate(-10deg);
+}
+
