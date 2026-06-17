@@ -8,6 +8,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --vermelho: #8f1800;
+    --vermelho-escuro: #750d06;
+    --creme: #feefdd;
+    --preto: #0f121a;
+}
+
 body {
     font-family: 'Grotesk', sans-serif;
     background-image: radial-gradient(#121617, #000000);
@@ -21,14 +28,14 @@ header {
 
 #logo {
     position: absolute;
-    color: #fef5ec;
+    color: var(--creme);
     font-weight: 600;
     left: 4%;
     top: 2.5%;
 }
 
 .menu {
-    color: #fef5ec;
+    color: var(--creme);
     font-weight: 600;
     position: absolute;
     display: flex;
@@ -71,7 +78,7 @@ li:hover {
 
 #dev {
    font-family: "Orbitron", sans-serif;
-   color: #fef5ec;
+   color: var(--creme);
    position: absolute;
    top: 25.7%;
    right: 10%;
@@ -80,7 +87,7 @@ li:hover {
 #line {
   border: none;
   height: 0.3px;
-  background-color: #fef5ec;
+  background-color: var(--creme);
   width: 23.6%;
   position: absolute;
   right: 20%;
@@ -90,7 +97,7 @@ li:hover {
 
 #my {
     font-size: 500%;
-    color: rgb(255, 255, 255);
+    color: var(--creme);
     font-family: "Mea culpa", cursive;
     text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.589);
     position: absolute;
@@ -102,11 +109,11 @@ li:hover {
     font-size: 500%;
     font-family: 'Silkscreen', sans-serif;
     text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.699);
-    -webkit-text-stroke: 3px rgb(255, 255, 255);
+    -webkit-text-stroke: 3px var(--creme);
     position: absolute;
     left: 57%;
     top: 34%;
-    background: -webkit-linear-gradient( #8a2020, #551117);
+    background: -webkit-linear-gradient( var(--vermelho), var(--vermelho-escuro));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -129,18 +136,37 @@ li:hover {
 .sobre {
     position: relative;
     height: 1000px;
-    background-color:  #8f1100;
-    border-top: 10px solid #fef5ec;
+    border-top: 10px solid var(--creme);
+    display: flex;
+    align-items: end;
+
+    background-color: var(--creme);
+    background-image: 
+    linear-gradient(45deg, var(--preto) 25%, transparent 25%), 
+    linear-gradient(-45deg, var(--preto) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, var(--preto) 75%), 
+    linear-gradient(-45deg, transparent 75%, var(--preto) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px; 
 }
+
+.box {
+    position: relative;
+    width: 1851px;
+    height: 700px;
+    border-top: 10px solid var(--creme);
+    background-color:  var(--vermelho);
+}
+
 
 #on {
     font-size: 140px;
     font-family: "Mea Culpa", cursive;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.699);
+    text-shadow: 2px 2px 0px var(--preto);
     position: absolute;
     left: 58%;
-    top: 18%;
-    color: #fef5ec;
+    top: 5%;
+    color: var(--vermelho);
 }
 
 #hello {
@@ -156,64 +182,86 @@ li:hover {
     left: 24%;
 }
 
-#letter {
+#pin {
     position: absolute;
-    top: 30%;
-    left: 10%;
-    z-index: 2;
-    width: 700px;
-    transform: rotate(-10deg); 
-    filter:grayscale(100%) drop-shadow( 3px 3px 15px rgba(0, 0, 0, 0.411));
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(#f02011, #8f1800, #0e0202 );
+    box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.432);
+    z-index: 4;
+    bottom: 71.7%;
+    left: 32.6%;
+    border-radius: 100%;
+}
+
+#smile {
+    position: absolute;
+    color: rgba(94, 10, 10, 0.541);
+    left: -8%;
+    top: -8%;
+    font-size: 69px;
+    transform: rotate(-20deg);
 }
 
 #photo {
-    width: 370px;
-    height: 480px;
-    background-color: rgb(231, 231, 231);
-    box-shadow:-6px 6px 8px rgba(0, 0, 0, 0.753);
+    width: 480px;
+    height: 590px;
+    background-color: var(--creme);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.664);
     position: absolute;
     bottom: 16%;
-    left: 20%;
+    left: 13%;
     z-index: 2;
     transform: rotate(-10deg);
+    border: 1px solid var(--vermelho-escuro);
+}
+
+#line_one {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin: 20px;
+}
+
+#line_two {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin: 20px;
 }
 
 #sophie {
-    width: 300px;
-    position: absolute;
-    left: 10%;
-    top: 6%;
+    width: 200px;
+    border: 1px solid var(--vermelho-escuro);
 }
 
 #id {
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    font-family: "Island Moments",cursive;
-    font-size: 60px;
-    transform: rotate(-10deg);
-}
-
-#age {
-    position: absolute;
     bottom: 0%;
-    left: 5%;
+    left: 35%;
     font-family: "Island Moments",cursive;
-    font-size: 60px;
+    font-size: 50px;
+    color: var(--vermelho-escuro);
 }
 
-#lang {
+#hi {
     position: absolute;
-    bottom: -2%;
-    left: 69%;
-    font-family: "Loved by the King",cursive;
-    font-size: 36px;
+    bottom: 6%;
+    left: 5%;
+    font-family: "Italianno",cursive;
+    font-size: 140px;
+    color: var(--creme);
+    text-shadow: 
+    -1px -1px 0 var(--preto), 
+     1px -1px 0 #000, 
+    -1px  1px 0 #000, 
+     3px  3px 0 #000;
 }
 
 #flag {
     position: absolute;
     width: 100px;
-    bottom: 17%;
+    bottom: 39%;
     left: 20%;
     z-index: 3;
     filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, 0.377));
@@ -223,46 +271,32 @@ li:hover {
 #Im {
     position: absolute;
     width: 160px;
-    top: 48%;
+    top: 28%;
     left: 34%;
-    z-index: 3;
-    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, 0.377));
+    z-index: 4;
+    filter: drop-shadow( -3px 3px 2px rgba(0, 0, 0, 0.377));
     transform: rotate(9deg);
 }
 
-#game {
-    font-size: 36px;
-    font-weight: 600;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
-    background: -webkit-linear-gradient( #000000, #000000);
-    -webkit-background-clip: text;
-    font-family: 'Silkscreen', sans-serif;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+#lore-box {
     position: absolute;
-    top: 58%;
-    left: 37%;
-    z-index: 4;
-    transform: rotate(-10deg);
+    width: 600px;
+    height: 500px;
+    background-color: var(--preto);
+    right: 10%;
+    bottom: 15%;
+    border-radius: 60px;
 }
 
-#profile {
-    font-size: 36px;
-    font-weight: 600;
-    font-family: "Mea Culpa", cursive;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
+.lore {
     position: absolute;
-    top: 58.3%;
-    left: 40.4%;
-    z-index: 4;
-    transform: rotate(-1deg);
-    color: #a71212;
-}
-
-.cods {
-    height: 1000px;
-    background-color: #8f1100;
-    border-top: 10px solid #fef5ec;
+    width: 600px;
+    height: 500px;
+    background-color: var(--creme);
+    border: 2px solid var(--preto);
+    right: 0%;
+    bottom: -9%;
+    border-radius: 60px;
 }
 
 #engines {
@@ -272,6 +306,6 @@ li:hover {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.397);
     position: absolute;
     right:20%;
-    color: #ffe6e6;
+    color: var(--creme);
 }
 
