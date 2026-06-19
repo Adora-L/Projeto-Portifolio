@@ -9,15 +9,29 @@
 }
 
 :root {
+    --vermelho-claro: #b41e00;
     --vermelho: #8f1800;
     --vermelho-escuro: #750d06;
     --creme: #feefdd;
-    --preto: #0f121a;
+    --preto: #090b0f;
+    --cinza-escuro: #0f121a;
+    --cinza: #262830;
 }
 
 body {
     font-family: 'Grotesk', sans-serif;
-    background-image: radial-gradient(#121617, #000000);
+    background-image: radial-gradient( var(--cinza), var(--cinza-escuro), var(--preto) );
+    background-size: 400% 100%;
+    animation: gradient-animated 5s infinite alternate;
+}
+
+@keyframes gradient-animated {
+    0% {
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
 }
 
 header {
@@ -34,27 +48,72 @@ header {
     top: 2.5%;
 }
 
-.menu {
-    color: var(--creme);
-    font-weight: 600;
+#menu {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: transparent;
     position: absolute;
-    display: flex;
-    right: 4%;
-    top: 0.9%;
+    left: 80%;
+    top: 2.6%;
 }
 
-li {
+
+#menu .menu_item {
+    font-weight: 600;
     padding: 20px;
-    list-style-type: none;
+    text-decoration: none;
+    color: var(--creme);
+    text-align: center;
 }
 
-li:hover {
-    text-decoration: underline 2px;
+.menu_item:hover {
     cursor: pointer;
+    background-color: #1a202e4b;
+    border-radius: 10px;
+    height: 50px;
 }
 
 #icon_menu {
-    margin-top: -4.3px;
+    margin-top: -3px;
+}
+
+@media screen and (max-width: 650px) {
+    #menu {
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 100%;
+    }
+
+    #menu #icon_menu::before {
+        position: absolute;
+        content: "menu";
+        font-family: "Material Symbols Outlined";
+        top: 0;
+        left: 0;
+        font-size: 30px;
+    }
+
+    #menu .menu_item {
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.25s;
+    }
+
+    #menu .item {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        border: 0.5em solid var(--cinza);
+    }
+
+    #menu:checked ~.menu_item {
+        max-height: 500px;
+    }
 }
 
 
@@ -113,9 +172,11 @@ li:hover {
     position: absolute;
     left: 57%;
     top: 34%;
-    background: -webkit-linear-gradient( var(--vermelho), var(--vermelho-escuro));
+    background: linear-gradient( 45deg ,var(--vermelho), var(--vermelho-escuro));
+    background-size: 400% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: text-gradient 10s linear infinite alternate;
 }
 
 #character {
